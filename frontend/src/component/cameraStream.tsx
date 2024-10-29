@@ -5,7 +5,7 @@ const VideoStream: React.FC = () => {
   const ws = useRef<WebSocket | null>(null);
 
   useEffect(() => {
-    ws.current = new WebSocket("ws://localhost:8000/ws/video_feed");
+    ws.current = new WebSocket("ws://127.0.0.1:8080/video_streaming");
 
     ws.current.onmessage = (event: MessageEvent) => {
       const blob = new Blob([event.data], { type: "image/jpeg" });
