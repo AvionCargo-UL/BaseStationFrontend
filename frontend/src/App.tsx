@@ -5,6 +5,8 @@ import StartButton from "./component/startButton";
 import ComponentStatus from "./component/componentStatus";
 import ArucoNumber from "./component/arucoNumber";
 import ArucoAngle from "./component/arucoAngle";
+import PayloadStatus from "./component/payloadStatus";
+import Steps from "./component/steps";
 
 function App() {
   return (
@@ -19,6 +21,9 @@ function App() {
       <ArucoNumber aruco_number={0}/>
       <ArucoNumber aruco_number={-1}/>
       <ArucoAngle yaw={-10.344} pitch={-98.432} roll={100}/>
+      <PayloadStatus isON={true}/>
+      <PayloadStatus isON={false}/>
+      <Steps currentStep={5}/>
     </div>
   );
 }

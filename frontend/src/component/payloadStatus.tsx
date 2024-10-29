@@ -1,12 +1,11 @@
 import React from 'react';
 import { Card, CardContent, Typography } from '@mui/material';
 
-interface ComponentStatusCardProps {
-  name: string;
-  isActive: boolean;
+interface PayloadStatusProps {
+  isON: boolean;
 }
 
-const ComponentStatus: React.FC<ComponentStatusCardProps> = ({ name, isActive }) => {
+const PayloadStatus: React.FC<PayloadStatusProps> = ({ isON }) => {
   return (
     <Card
       sx={{
@@ -18,21 +17,21 @@ const ComponentStatus: React.FC<ComponentStatusCardProps> = ({ name, isActive })
     >
       <CardContent>
         <Typography variant="h6" component="div" gutterBottom>
-          {name}
+          Payload
         </Typography>
         <Typography
           variant="body1"
           component="div"
           sx={{
-            color: isActive ? 'green' : 'red',
+            color: isON ? 'red' : 'green',
             fontWeight: 'bold',
           }}
         >
-          {isActive ? 'ON' : 'OFF'}
+          {isON ? 'IN' : 'OUT'}
         </Typography>
       </CardContent>
     </Card>
   );
 };
 
-export default ComponentStatus;
+export default PayloadStatus;
