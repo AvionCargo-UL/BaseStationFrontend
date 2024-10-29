@@ -7,6 +7,7 @@ import ArucoNumber from "./component/arucoNumber";
 import ArucoAngle from "./component/arucoAngle";
 import PayloadStatus from "./component/payloadStatus";
 import Steps from "./component/steps";
+import CameraStream from "./component/cameraStream";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <PayloadStatus isON={true}/>
       <PayloadStatus isON={false}/>
       <Steps currentStep={5}/>
+      <CameraStream/>
     </div>
   );
 }
