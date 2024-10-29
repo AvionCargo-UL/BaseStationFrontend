@@ -75,7 +75,7 @@ function Steps({ currentStep }: IProps) {
   };
 
   return (
-    <CardWrapper title="Étapes réalisées">
+    <CardWrapper title="Flight steps">
       <Timeline sx={{
         [`& .${timelineOppositeContentClasses.root}`]: {
           flex: 0.2,
