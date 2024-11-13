@@ -82,14 +82,14 @@ function Steps({ currentStep }: IProps) {
         },
       }}
       >
-        {steps.map((step) => (
+        {steps.map((step, index) => (
           <TimelineItem key={step.description}>
             <TimelineOppositeContent>
               <Typography variant="body2" color="textSecondary">{step.number}</Typography>
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineDot color={getDotColor(step.number)} />
-              <TimelineConnector />
+              {index < steps.length - 1 && <TimelineConnector />}
             </TimelineSeparator>
             <TimelineContent>
               <Typography variant="body2" color="textSecondary">{step.description}</Typography>

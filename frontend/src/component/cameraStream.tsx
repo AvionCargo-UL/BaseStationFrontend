@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import flightPlanImagePlaceholder from '../assets/flight_plan_placeholder.png';
 
 const VideoStream: React.FC = () => {
   const [imageSrc, setImageSrc] = useState<string | null>(null);
@@ -25,9 +26,13 @@ const VideoStream: React.FC = () => {
 
   return (
     <div>
-      <h2>Live Video Feed</h2>
-      {imageSrc && <img src={imageSrc} alt="Live Video" />}
+      {imageSrc ? (
+        <img src={imageSrc} alt="Live Video"/>
+      ) : (
+        <img src={flightPlanImagePlaceholder} alt="Placeholder"/>
+      )}
     </div>
+
   );
 };
 

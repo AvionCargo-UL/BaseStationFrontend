@@ -14,7 +14,8 @@ const StartButton: React.FC<StatusButtonProps> = ({ isEnabled }) => {
         '&:hover': {
           backgroundColor: isEnabled ? 'green' : 'darkred',
         },
-        transition: 'background-color 0.3s ease', // Optional: Add transition for smoother hover effect
+        width: "100%",
+        transition: 'background-color 0.3s ease',
       }}
     >
       {isEnabled ? 'GO' : 'STOP'}

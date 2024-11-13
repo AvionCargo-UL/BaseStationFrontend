@@ -11,7 +11,7 @@ interface IProps {
 
 function CardWrapper({ title, children }: IProps) {
   return (
-    <Paper elevation={8} sx={{ padding: '25px', height: '100%' }}>
+    <Paper elevation={8} sx={{ padding: '12px', height: 'auto' }}>
       <Stack marginBottom={2} spacing={0.5}>
         <Typography variant="h5">{title}</Typography>
         <Divider />

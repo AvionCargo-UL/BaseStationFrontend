@@ -9,7 +9,7 @@ const FlightPlan = () => {
   ];
 
   return (
-    <Box textAlign="center">
+    <Box textAlign="left">
       <Box
         sx={{
           width: '800px',
